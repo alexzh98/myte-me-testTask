@@ -117,7 +117,7 @@ public class SurveyController {
 
     @GetMapping("/surveys/{id}")
     @Operation(summary = "Поиск по Id")
-    public ResponseEntity<?> getOne(@PathVariable(name = "id") @Parameter(description = "ID") Long id) {
+    public ResponseEntity<?> getOne(@PathVariable("id") @Parameter(description = "ID") Long id) {
         return new ResponseEntity(surveyService.getOne(id), HttpStatus.OK);
     }
 }

@@ -77,7 +77,7 @@ public class QuestionController {
     @Operation(summary = "Поиск по ID")
     @GetMapping("/{id}")
     public @ResponseBody
-    ResponseEntity<?> getOne(@Parameter(description = "ID")@PathVariable(name = "id") Long id){
+    ResponseEntity<?> getOne(@Parameter(description = "ID")@PathVariable("id") Long id){
         return  new ResponseEntity<>(questionService.findById(id),HttpStatus.OK);
 
     }

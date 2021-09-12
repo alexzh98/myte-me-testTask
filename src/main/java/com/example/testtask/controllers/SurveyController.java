@@ -23,7 +23,7 @@ import java.util.Set;
 
 @RestController
 @Tag(name = "Survey Controller")
-public class SurveyController {
+public class zSurveyController {
 
     @Autowired
     private SurveyService surveyService;
